@@ -1,0 +1,30 @@
+.card {
+  display: grid;
+  width: min-content;
+
+  padding: 10px 25px;
+  background-color: lightcoral;
+
+  margin: 10px;
+}
+
+.card__image {
+  width: 300px;
+  height: 200px;
+  background-color: lightcyan;
+}
+
+.card__title {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  display: flex;
+  flex-flow: row wrap;
+}
