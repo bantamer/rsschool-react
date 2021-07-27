@@ -1,0 +1,25 @@
+{
+  "name": "reactcomponents",
+  "version": "1.0.0",
+  "description": "learning React",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bantamer/reactComponents.git"
+  },
+  "author": "Pazhitnkyh Petr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bantamer/reactComponents/issues"
+  },
+  "homepage": "https://github.com/bantamer/reactComponents#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
+}
