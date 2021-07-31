@@ -5,13 +5,17 @@ import './index.css';
 
 import Cards from './components/card';
 import Header from './components/header';
+import Form from './components/form';
 
 const App = () => (
   <>
     <Header />
-    <main>
-      <section>
+    <main className="page__main">
+      <section className="section">
         <Cards />
+      </section>
+      <section className="section section_background-powerblue">
+        <Form />
       </section>
     </main>
   </>
