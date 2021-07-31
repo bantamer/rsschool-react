@@ -6,12 +6,16 @@
   background-color: lightcoral;
 
   margin: 10px;
+
+  border-radius: 5px;
 }
 
 .card__image {
   width: 300px;
   height: 200px;
   background-color: lightcyan;
+
+  border-radius: 5px;
 }
 
 .card__title {
@@ -19,5 +23,40 @@
   font-size: 25px;
   font-weight: 600;
   margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.card__button {
+  margin: 10px 0;
+  width: 100%;
+  min-height: 50px;
+  padding: 5px;
+
+  border: 0px;
+  border-radius: 5px;
+
+  background-color: brown;
+
+  font-size: 20px;
+  text-transform: capitalize;
+  color: antiquewhite;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background-color: chartreuse;
+  color: black;
+  font-weight: 600;
+}
+
+.card__anotation {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card__cost {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
   text-transform: uppercase;
 }

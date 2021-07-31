@@ -2,5 +2,5 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: ['airbnb', 'airbnb/hooks'],
+  extends: ['airbnb', 'airbnb/hooks', 'prettier'],
 };
