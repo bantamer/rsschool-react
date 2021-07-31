@@ -21,10 +21,3 @@
   margin: 10px 0;
   text-transform: uppercase;
 }
-
-.container {
-  margin: 0 auto;
-  max-width: 1110px;
-  display: flex;
-  flex-flow: row wrap;
-}

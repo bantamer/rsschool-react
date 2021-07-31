@@ -1,37 +1,36 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Cards = (
+import './index.css';
+
+const Card = ({ imgUrl, title, anotation }) => (
+  <div className="card">
+    <img className="card__image" src={imgUrl} alt={title} />
+    <h3 className="card__title">{title}</h3>
+    <div className="card__article">{anotation}</div>
+  </div>
+);
+
+Card.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  anotation: PropTypes.string.isRequired,
+};
+
+const CARDS = [
+  { imgUrl: 'https://picsum.photos/id/237/200', title: 'Card Title', anotation: 'Anotation' },
+  { imgUrl: 'https://picsum.photos/id/238/200', title: 'Card Title', anotation: 'Anotation' },
+  { imgUrl: 'https://picsum.photos/id/239/200', title: 'Card Title', anotation: 'Anotation' },
+  { imgUrl: 'https://picsum.photos/id/240/200', title: 'Card Title', anotation: 'Anotation' },
+  { imgUrl: 'https://picsum.photos/id/241/200', title: 'Card Title', anotation: 'Anotation' },
+  { imgUrl: 'https://picsum.photos/id/242/200', title: 'Card Title', anotation: 'Anotation' },
+];
+
+const Cards = () => (
   <div className="container">
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
-    <div className="card">
-      <img className="card__image"></img>
-      <h3 className="card__title">card title</h3>
-      <div className="card__article">card anotation</div>
-    </div>
+    {CARDS.map((card) => (
+      <Card key={card.imgUrl} imgUrl={card.imgUrl} title={card.title} anotation={card.anotation} />
+    ))}
   </div>
 );
 

@@ -1,21 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const Header = (
+import './index.css';
+
+const Header = () => (
   <header className="header">
+    <h2 className="header__title">Welcome to the Internet please folow me...</h2>
     <form className="search">
       <input
         className="search__input"
         type="text"
         placeholder="Find me"
         aria-label="Search For Meaning"
-      ></input>
+      />
       <button className="search__button" type="submit">
         Find
       </button>
     </form>
   </header>
 );
-
-const Hui = <h1>Privet</h1>;
 
 export default Header;
