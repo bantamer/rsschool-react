@@ -1,0 +1,12 @@
+# ide
+.idea/
+
+# npm
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+#parcel
+.parcel-cache
+dist

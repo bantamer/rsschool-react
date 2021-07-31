@@ -1,3 +1,3 @@
 module.exports = {
-  extends: "airbnb-typescript-prettier",
+  extends: ['airbnb', 'airbnb/hooks'],
 };
