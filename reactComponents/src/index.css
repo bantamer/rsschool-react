@@ -10,10 +10,25 @@
 .container {
   margin: 0 auto;
   max-width: 1110px;
+}
+
+.container_flex-cards {
   display: flex;
   flex-flow: row wrap;
 }
 
+.section {
+  padding: 10px;
+}
+
 .section_background-powerblue {
   background-color: powderblue;
+}
+
+/* @media */
+
+@media (max-width: 1110px) {
+  .container {
+    max-width: min-content;
+  }
 }

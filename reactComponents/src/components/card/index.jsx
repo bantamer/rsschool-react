@@ -64,7 +64,7 @@ const CARDS = [
 ];
 
 const Cards = () => (
-  <div className="container">
+  <div className="container container_flex-cards">
     {CARDS.map((card) => (
       <Card
         key={card.imgUrl}
