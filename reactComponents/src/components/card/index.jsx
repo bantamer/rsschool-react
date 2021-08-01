@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './index.css';
+import './card.css';
 
 const Card = ({ imgUrl, title, anotation, cost }) => (
   <div className="card">
