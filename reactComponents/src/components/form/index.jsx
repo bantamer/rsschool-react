@@ -2,29 +2,64 @@ import React from 'react';
 
 import './form.css';
 
+import Input from './formComponents/input';
+import Select from './formComponents/select';
+
+const OPTIONS = [
+  {
+    optionValue: 'Male',
+    optionClass: 'select__option',
+  },
+  {
+    optionValue: 'Female',
+    optionClass: 'select__option',
+  },
+  {
+    optionValue: 'Other',
+    optionClass: 'select__option',
+  },
+];
+
 const Form = () => (
   <div className="container">
     <form className="form form_flex">
-      <label className="form__label" htmlFor="firstName">
-        First Name
-        <input id="firstName" className="form__input" type="text" placeholder="Petr" />
-      </label>
-      <label className="form__label" htmlFor="lastName">
-        Last Name
-        <input id="lastName" className="form__input" type="text" placeholder="Pazhitnykh" />
-      </label>
-      <label className="form__label" htmlFor="date">
-        Date of birth
-        <input id="date" className="form__input" type="date" />
-      </label>
-      <label className="form__label" htmlFor="number">
-        Number
-        <input id="number" className="form__input" type="tel" placeholder="+1 123 123 123" />
-      </label>
-      <label className="form__label" htmlFor="number">
-        Email
-        <input id="email" className="form__input" type="email" placeholder="someone@email.com" />
-      </label>
+      <Input
+        inputClass="form__input"
+        labelClass="form__label"
+        labelValue="First Name"
+        id="firstName"
+        placeHolder="Petr"
+      />
+      <Input
+        inputClass="form__input"
+        labelClass="form__label"
+        labelValue="Last Name"
+        id="lastName"
+        placeHolder="Pazhitnykh"
+      />
+      <Input
+        inputClass="form__input"
+        labelClass="form__label"
+        labelValue="Date of Birth"
+        id="dateOfBirth"
+        inputType="date"
+      />
+      <Input
+        inputClass="form__input"
+        labelClass="form__label"
+        labelValue="Mobile"
+        id="telNumber"
+        inputType="tel"
+        placeHolder="+1 123 123 123"
+      />
+      <Input
+        inputClass="form__input"
+        labelClass="form__label"
+        labelValue="Email"
+        id="email"
+        inputType="email"
+        placeHolder="someone@email.com"
+      />
       <label className="form__label form__label_size-checkbox" htmlFor="userMarried">
         <div className="wrapper-checkbox">
           <div className="checkbox-select"> Are You Married</div>
@@ -32,14 +67,13 @@ const Form = () => (
           <span className="slider" />
         </div>
       </label>
-      <label className="form__label" htmlFor="userSex">
-        Sex
-        <select className="select">
-          <option className="select__option">Male</option>
-          <option className="select__option">Female</option>
-          <option className="select__option">Other</option>
-        </select>
-      </label>
+      <Select
+        options={OPTIONS}
+        selectClass="select"
+        labelValue="Sex"
+        labelClass="form__label"
+        id="userSex"
+      />
       <label className="form__label form__label_flex-personal" htmlFor="personalData">
         I agree to the processing of personal data
         <input className="form__input-checkbox" type="checkbox" id="personalData" />
