@@ -1,35 +1,26 @@
 import React from 'react';
-import PropTypes, { object, string } from 'prop-types';
+import PropTypes from 'prop-types';
 
-const SelectOption = ({ optionClass, optionValue }) => (
-  <option className={optionClass}>{optionValue}</option>
-);
+const SelectOption = ({ option }) => <option className="select__option">{option}</option>;
 
 SelectOption.propTypes = {
-  optionClass: PropTypes.string.isRequired,
-  optionValue: PropTypes.string.isRequired,
+  option: PropTypes.string.isRequired,
 };
 
-const Select = ({ options, selectClass, labelValue, labelClass, id }) => (
-  <label className={labelClass} htmlFor={id}>
-    {labelValue}
-    <select className={selectClass} id={id}>
+const Select = ({ options, label, id }) => (
+  <label className="form__label" htmlFor={id}>
+    {label}
+    <select className="select" id={id}>
       {options.map((option) => (
-        <SelectOption
-          key={option.optionValue}
-          optionClass={option.optionClass}
-          optionValue={option.optionValue}
-        />
+        <SelectOption key={option} option={option} />
       ))}
     </select>
   </label>
 );
 
 Select.propTypes = {
-  selectClass: PropTypes.string.isRequired,
-  options: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-  labelClass: PropTypes.string.isRequired,
-  labelValue: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 

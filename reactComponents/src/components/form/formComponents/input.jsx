@@ -1,25 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ labelClass, inputClass, labelValue, id, placeHolder, inputType }) => (
-  <label className={labelClass} htmlFor={id}>
-    {labelValue}
-    <input id={id} className={inputClass} type={inputType} placeholder={placeHolder} />
+const Input = ({ label, id, placeHolder, type }) => (
+  <label className="form__label" htmlFor={id}>
+    {label}
+    <input id={id} className="form__input" type={type} placeholder={placeHolder} />
   </label>
 );
 
 Input.propTypes = {
-  inputClass: PropTypes.string.isRequired,
-  labelClass: PropTypes.string.isRequired,
-  labelValue: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   placeHolder: PropTypes.string,
-  inputType: PropTypes.string,
+  type: PropTypes.string,
 };
 
 Input.defaultProps = {
   placeHolder: '',
-  inputType: 'text',
+  type: 'text',
 };
 
 export default Input;
