@@ -1,0 +1,8 @@
+.card_size {
+  min-width: 485px;
+  height: max-content;
+}
+
+.card__annotation_size {
+  padding: 5px;
+}
