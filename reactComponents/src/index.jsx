@@ -5,7 +5,7 @@ import './index.css';
 
 import Cards from './components/card';
 import Header from './components/header';
-import Form from './components/form';
+import FormWithCards from './components/formWithCards/renderForm';
 
 const App = () => (
   <>
@@ -15,7 +15,7 @@ const App = () => (
         <Cards />
       </section>
       <section className="section section_background-powerblue">
-        <Form />
+        <FormWithCards />
       </section>
     </main>
   </>
