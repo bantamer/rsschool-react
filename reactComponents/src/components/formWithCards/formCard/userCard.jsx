@@ -30,6 +30,7 @@ const UserCard = ({ card }) => (
     </div>
   </div>
 );
+
 const CardPropType = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
@@ -40,6 +41,7 @@ const CardPropType = {
   sex: PropTypes.string.isRequired,
   personalData: PropTypes.string.isRequired,
 };
+
 UserCard.propTypes = {
   card: PropTypes.shape(CardPropType).isRequired,
 };
