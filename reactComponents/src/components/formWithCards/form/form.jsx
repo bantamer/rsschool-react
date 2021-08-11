@@ -32,24 +32,9 @@ const Form = ({ onSubmit }) => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="form form_flex">
-        <Input
-          name="firstName"
-          label="First Name"
-          id="userFirstName"
-          placeHolder="Petr"
-        />
-        <Input
-          name="lastName"
-          label="Last Name"
-          id="userLastName"
-          placeHolder="Pazhitnykh"
-        />
-        <Input
-          name="dateOfBirth"
-          label="Date of Birth"
-          id="userDateOfBirth"
-          type="date"
-        />
+        <Input name="firstName" label="First Name" id="userFirstName" placeHolder="Petr" />
+        <Input name="lastName" label="Last Name" id="userLastName" placeHolder="Pazhitnykh" />
+        <Input name="dateOfBirth" label="Date of Birth" id="userDateOfBirth" type="date" />
         <Input
           name="mobile"
           label="Mobile"
@@ -64,22 +49,21 @@ const Form = ({ onSubmit }) => {
           type="email"
           placeHolder="someone@email.com"
         />
-        <Switch name="married" value="Are You Married" />
+        <Switch name="married" label="Are You Married" />
         <Select name="sex" options={OPTIONS} label="Sex" id="userSex" />
         <CheckBox
           name="personalData"
-          value="I agree to the processing of personal data"
+          label="I agree to the processing of personal data"
           id="personalData"
         />
-        <SubmitButton value="submit" />
+        <SubmitButton />
       </form>
     </div>
   );
 };
+
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
-export default Form;
 
-// const sexOption = event.target.sex;
-// const personalDataCheckbox = event.target.personalData;
+export default Form;

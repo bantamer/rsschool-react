@@ -30,7 +30,7 @@ const UserCard = ({ card }) => (
     </div>
   </div>
 );
-const CardPropTypes = {
+const CardPropType = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
@@ -41,10 +41,10 @@ const CardPropTypes = {
   personalData: PropTypes.string.isRequired,
 };
 UserCard.propTypes = {
-  card: PropTypes.shape(CardPropTypes).isRequired,
+  card: PropTypes.shape(CardPropType).isRequired,
 };
 
-const RenderCards = ({ cards }) => (
+const CardsList = ({ cards }) => (
   <div className="container container_flex-cards">
     {cards.map((card) => (
       <UserCard key={card.id} card={card} />
@@ -52,8 +52,8 @@ const RenderCards = ({ cards }) => (
   </div>
 );
 
-RenderCards.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.shape(CardPropTypes)).isRequired,
+CardsList.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape(CardPropType)).isRequired,
 };
 
-export default RenderCards;
+export default CardsList;
