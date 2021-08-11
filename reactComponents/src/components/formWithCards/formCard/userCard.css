@@ -1,5 +1,5 @@
 .card_size {
-  min-width: 485px;
+  max-width: 485px;
   height: max-content;
 }
 
