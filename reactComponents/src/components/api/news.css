@@ -1,6 +1,39 @@
+/* Link */
+.link {
+  text-decoration: none;
+  text-transform: none;
+  color: #030303;
+}
+
+.news:hover {
+  border: 2px solid #030303;
+  padding: 8px;
+}
+
+/* News */
 .news {
+  padding: 10px;
+
+  display: flex;
+  column-gap: 20px;
+  flex-flow: column wrap;
+
+  margin: 10px 0;
+}
+
+.news_size {
+  max-width: 1110px;
 }
 
 .news__image {
+  size: cover;
   width: 150px;
+}
+
+.news__author {
+  margin: 10px 0;
+}
+
+.news__title {
+  margin: 10px 0;
 }

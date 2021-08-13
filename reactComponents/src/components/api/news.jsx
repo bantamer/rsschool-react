@@ -4,20 +4,25 @@ import PropTypes from 'prop-types';
 import './news.css';
 
 const News = ({ news }) => (
-  <a href={news.url}>
+  <a className="link" href={news.url}>
     <article className="news">
-      <img className="news__image" src={news.urlToImage} alt={news.title} />
-      <h3 className="news__title">{news.title}</h3>
-      <p className="news__lead">{news.content}</p>
+      <div className="news__lead">
+        <h3 className="news__title">{news.title}</h3>
+        <h6 className="news__author">
+          {news.author} {news.publishedAt}
+        </h6>
+        <p className="news__paragraph">{news.description}</p>
+      </div>
     </article>
   </a>
 );
 
 const NewsPropTypes = {
   url: PropTypes.string.isRequired,
-  urlToImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
 };
 
 News.propTypes = {
